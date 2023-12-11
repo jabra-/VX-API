@@ -13,9 +13,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v1.0.2
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.1
 
-    - name: Build with MSBuild
+    - name: Build x64 with MSBuild
       run: |
-        msbuild VX-API.sln /p:Configuration=Release
+        msbuild YourProject.sln /p:Configuration=Release /p:Platform=x64
+
+    - name: Build x86 with MSBuild
+      run: |
+        msbuild YourProject.sln /p:Configuration=Release /p:Platform=Win32
