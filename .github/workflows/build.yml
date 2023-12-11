@@ -15,12 +15,10 @@ jobs:
 
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.0.1
-      with:
-        msbuild-architecture: x64
-        
+      
     - name: Build x64 with MSBuild
       run: |
-        msbuild VX-AP.sln /p:Configuration=Release
+        msbuild VX-AP.sln /p:Configuration=Release /p:Platform=x64
 
     - name: Build x86 with MSBuild
       run: |
