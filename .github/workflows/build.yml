@@ -22,5 +22,5 @@ jobs:
 
     - name: Build with MSBuild (Release x86)
       run: |
-        msbuild VX-API.sln /p:Configuration=Release /p:Platform=Win32
+        msbuild VX-API.sln /p:Configuration=Release /p:Platform=x86
 
