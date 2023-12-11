@@ -18,7 +18,7 @@ jobs:
 
     - name: Build x64 with MSBuild
       run: |
-        msbuild VX-AP.sln /p:Configuration=Release /p:Platform=x64
+        msbuild VX-AP.sln /p:Configuration=Release
 
     - name: Build x86 with MSBuild
       run: |
