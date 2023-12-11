@@ -16,6 +16,11 @@ jobs:
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.0.2
 
-    - name: Build with MSBuild
+    - name: Build with MSBuild (Release x64)
       run: |
         msbuild VX-API.sln /p:Configuration=Release
+
+    - name: Build with MSBuild (Release x86)
+      run: |
+        msbuild VX-API.sln /p:Configuration=Release /p:Platform=Win32
+
